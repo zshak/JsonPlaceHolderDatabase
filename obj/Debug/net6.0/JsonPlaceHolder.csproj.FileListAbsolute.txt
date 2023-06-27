@@ -34,3 +34,5 @@ C:\Users\zshakulashvili\source\repos\JsonPlaceHolder\JsonPlaceHolder\obj\Debug\n
 C:\Users\zshakulashvili\source\repos\JsonPlaceHolder\JsonPlaceHolder\obj\Debug\net6.0\JsonPlaceHolder.pdb
 C:\Users\zshakulashvili\source\repos\JsonPlaceHolder\JsonPlaceHolder\obj\Debug\net6.0\JsonPlaceHolder.genruntimeconfig.cache
 C:\Users\zshakulashvili\source\repos\JsonPlaceHolder\JsonPlaceHolder\obj\Debug\net6.0\ref\JsonPlaceHolder.dll
+C:\Users\zshakulashvili\source\repos\JsonPlaceHolder\JsonPlaceHolder\bin\Debug\net6.0\Dapper.dll
+C:\Users\zshakulashvili\source\repos\JsonPlaceHolder\JsonPlaceHolder\bin\Debug\net6.0\Npgsql.dll

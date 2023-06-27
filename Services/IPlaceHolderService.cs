@@ -1,4 +1,5 @@
 ﻿using JsonPlaceHolder.Models;
+using System.Reflection;
 
 namespace JsonPlaceHolder.Services
 {
@@ -6,7 +7,9 @@ namespace JsonPlaceHolder.Services
     {
         Task<List<Post>> GetAllPosts();
         Task<Post> GetPostById(int id);
-        Task<List<Comment>> GetCommentsById(int id);
-        Task<List<Comment>> GetCommentsByIdQuery(int id);
+        Task AddPost(int userId, string title, string body);
+        Task UpdatePost(int userId, string title, string body);
+        Task DeletePost(int userId);
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using JsonPlaceHolder.Services;
+﻿using JsonPlaceHolder.Models;
+using JsonPlaceHolder.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,16 +27,26 @@ namespace JsonPlaceHolder.Controllers
             return Ok(await _placeHolderService.GetPostById(id));
         }
 
-        [HttpGet("/posts/{id}/comments")]
-        public async Task<IActionResult> GetCommentsById(int id)
+
+        [HttpPost("/posts")]
+        public async Task<IActionResult> AddPost(int userId, string title, string body)
         {
-            return Ok(await _placeHolderService.GetCommentsById(id));
+            await _placeHolderService.AddPost(userId, title, body);
+            return Ok();
         }
 
-        [HttpGet("/comments")]
-        public async Task<IActionResult> GetCommentsByIdQuerry(int id)
+        [HttpPut ("/posts/{userId}")]
+        public async Task<IActionResult> UpdatePost(int userId, string title, string body)
         {
-            return Ok(await _placeHolderService.GetCommentsByIdQuery(id));
+            await _placeHolderService.UpdatePost(userId, title, body);
+            return Ok();
+        }
+
+        [HttpDelete("/posts/{userId}")]
+        public async Task<IActionResult> DeletePost(int userId)
+        {
+            await _placeHolderService.DeletePost(userId);
+            return Ok();
         }
     }
 }
